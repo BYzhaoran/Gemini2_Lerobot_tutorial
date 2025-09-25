@@ -125,7 +125,7 @@ python -m lerobot.record \
 
 ## 📖 参考资料
 
-* [LeRobot 官方文档](https://lerobot.org/)
+* [LeRobot 官方github](https:github.com/huggingface/lerobot)
 * [Seeed Studio LeRobot Wiki](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/)
 * [Orbbec 开发者中心](https://developer.orbbec.com.cn/)
 * [pyorbbecsdk GitHub](https://github.com/orbbec/pyorbbecsdk)
@@ -134,7 +134,7 @@ python -m lerobot.record \
 
 ## 💡 作者与贡献
 
-* 作者: @你的名字
+* 作者: 张家铨，王文钊
 * 欢迎提交改进建议与 PR！
 
 ---
