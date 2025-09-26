@@ -56,12 +56,16 @@
 以下示例均需将 `so10x` 替换为实际型号（如 `so100` / `so101`）。
 
 ### 🔹 3.1 相机接入与遥操控
+
+我们加入了focus_area超参数，因为过远的深度数据对于机械臂没有意义（抓取不到），因此小于或者大于focus_area的深度数据将会变为黑色,默认的focus_area是(20,600)
+目前支持的分辨率只限于 width: 640, height: 880
+
 ```bash
 python -m lerobot.teleoperate \
   --robot.type=so10x_follower \
   --robot.port=/dev/ttyACM1 \
   --robot.id=my_awesome_follower_arm \
-  --robot.cameras="{ front: {type: orbbec, width: 640, height: 880, fps: 30}}" \
+  --robot.cameras="{ front: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:(20,600)}}" \
   --teleop.type=so10x_leader \
   --teleop.port=/dev/ttyACM0 \
   --teleop.id=my_awesome_leader_arm \
@@ -74,7 +78,7 @@ python -m lerobot.record \
   --robot.type=so10x_follower \
   --robot.port=/dev/ttyACM1 \
   --robot.id=my_awesome_follower_arm \
-  --robot.cameras="{ front: {type: orbbec, width: 640, height: 880, fps: 30}}" \
+  --robot.cameras="{ front: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:(20,600)}}" \
   --teleop.type=so10x_leader \
   --teleop.port=/dev/ttyACM0 \
   --teleop.id=my_awesome_leader_arm \
