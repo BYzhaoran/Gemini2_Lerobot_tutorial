@@ -25,7 +25,7 @@
 ## 🚀 步骤 1：安装 Orbbec SDK 依赖环境
 
 0. 拉取 `pyorbbec` 仓库
- ```bash
+```bash
 git clone https://github.com/orbbec/pyorbbecsdk.git
 ````
 
