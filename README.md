@@ -106,7 +106,21 @@ python -m lerobot.record \
   --dataset.single_task="Put lego brick into the transparent box" \
   --policy.path=outputs/train/act_so101_test/checkpoints/last/pretrained_model
 ```
+###  3.5 requirment.txt环境配置
+在requirment.txt写如下配置
+```requirment.txt
+pybind11==2.11.0
+pybind11-global==2.11.0
+opencv-python
+wheel
+numpy<2.0  # see https://github.com/orbbec/pyorbbecsdk/issues/47
+av # for h264 decoding
+pygame # for visualization
+pynput # for keyboard input
+https://github.com/orbbec/pyorbbecsdk/releases/download/v2.0.13/pyorbbecsdk-2.0.13-cp310-cp310-linux_x86_64.whl
 
+```
+最后一行是pysdk，直接从github拉取，经我们测试可以做到不用自己编译，但是环境的numpy版本仍然要小于2.0,如果强行升numpy版本，将需要重新编译才能正常工作，这主要是因为pybind版本导致的，目前已经在和Orbbec官方沟通
 ---
 
 ## 🔍 注意事项
