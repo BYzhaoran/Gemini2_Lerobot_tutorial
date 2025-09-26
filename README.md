@@ -28,6 +28,9 @@
 ```bash
 git clone https://github.com/orbbec/pyorbbecsdk.git
 ````
+   ```bash
+   git clone https://github.com/orbbec/pyorbbecsdk.git
+   ````
 
 1. 下载并安装 SDK 对应的 **.whl 文件**
    前往 [pyorbbecsdk Releases](https://github.com/orbbec/pyorbbecsdk/releases)
